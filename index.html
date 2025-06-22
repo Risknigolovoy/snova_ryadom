@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Снова рядом</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">
+  // Воспроизведение фоновой музыки и звуков
+  const bgMusic = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2022/03/15/audio_587491f6e3.mp3?filename=magic-attack-7187.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.3
+  });
+
+  const forestSound = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2023/03/15/audio_2199e7c329.mp3?filename=night-forest-145891.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.2
+  });
+
+  // Огни замка (мерцание)
+  const castleLight = document.querySelector(".castle");
+  if (castleLight) {
+    setInterval(() => {
+      castleLight.style.filter = "brightness(" + (0.9 + Math.random() * 0.2) + ")";
+    }, 800);
+  }
+
+  // Lottie-анимация кота
+  lottie.loadAnimation({
+    container: document.getElementById('catLottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/b8b75f84-bf52-4d7b-91c0-96b77dd145a1/edUoRuLmsH.json' // милый анимированный чёрный кот
+  });
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js">
+  // Воспроизведение фоновой музыки и звуков
+  const bgMusic = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2022/03/15/audio_587491f6e3.mp3?filename=magic-attack-7187.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.3
+  });
+
+  const forestSound = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2023/03/15/audio_2199e7c329.mp3?filename=night-forest-145891.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.2
+  });
+
+  // Огни замка (мерцание)
+  const castleLight = document.querySelector(".castle");
+  if (castleLight) {
+    setInterval(() => {
+      castleLight.style.filter = "brightness(" + (0.9 + Math.random() * 0.2) + ")";
+    }, 800);
+  }
+
+  // Lottie-анимация кота
+  lottie.loadAnimation({
+    container: document.getElementById('catLottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/b8b75f84-bf52-4d7b-91c0-96b77dd145a1/edUoRuLmsH.json' // милый анимированный чёрный кот
+  });
+</script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      background: #0d0d1a;
+      color: white;
+      overflow-x: hidden;
+    }
+    section {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/night-736877_1280.jpg') center/cover no-repeat;
+      z-index: -2;
+      opacity: 0.5;
+    }
+    .castle {
+      width: 60%;
+      max-width: 600px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    .cat {
+      width: 180px;
+      position: absolute;
+      bottom: 60px;
+      right: 40px;
+      z-index: 1;
+      animation: tail 4s infinite ease-in-out;
+    }
+    
+    @keyframes fogMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 0; }
+    }
+    @keyframes tail {
+
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(2deg); }
+    }
+    h1, p {
+      max-width: 600px;
+      text-align: center;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js">
+  // Воспроизведение фоновой музыки и звуков
+  const bgMusic = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2022/03/15/audio_587491f6e3.mp3?filename=magic-attack-7187.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.3
+  });
+
+  const forestSound = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2023/03/15/audio_2199e7c329.mp3?filename=night-forest-145891.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.2
+  });
+
+  // Огни замка (мерцание)
+  const castleLight = document.querySelector(".castle");
+  if (castleLight) {
+    setInterval(() => {
+      castleLight.style.filter = "brightness(" + (0.9 + Math.random() * 0.2) + ")";
+    }, 800);
+  }
+
+  // Lottie-анимация кота
+  lottie.loadAnimation({
+    container: document.getElementById('catLottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/b8b75f84-bf52-4d7b-91c0-96b77dd145a1/edUoRuLmsH.json' // милый анимированный чёрный кот
+  });
+</script>
+
+  <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js">
+  // Воспроизведение фоновой музыки и звуков
+  const bgMusic = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2022/03/15/audio_587491f6e3.mp3?filename=magic-attack-7187.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.3
+  });
+
+  const forestSound = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2023/03/15/audio_2199e7c329.mp3?filename=night-forest-145891.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.2
+  });
+
+  // Огни замка (мерцание)
+  const castleLight = document.querySelector(".castle");
+  if (castleLight) {
+    setInterval(() => {
+      castleLight.style.filter = "brightness(" + (0.9 + Math.random() * 0.2) + ")";
+    }, 800);
+  }
+
+  // Lottie-анимация кота
+  lottie.loadAnimation({
+    container: document.getElementById('catLottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/b8b75f84-bf52-4d7b-91c0-96b77dd145a1/edUoRuLmsH.json' // милый анимированный чёрный кот
+  });
+</script>
+
+</head>
+
+<body>
+
+  
+  <div class="stars"></div>
+  <div class="fog" style="position:absolute;width:100%;height:100%;z-index:-1;top:0;left:0;background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Fog_overlay.svg/1920px-Fog_overlay.svg.png') center/cover no-repeat;opacity:0.1;animation: fogMove 60s linear infinite;"></div>
+
+
+  <section>
+    <h1>Ты снова рядом со мной</h1>
+  </section>
+
+  <section>
+    <p>Тихий лес, мерцающие звезды, и сердце, полное света.</p>
+  </section>
+
+  <section>
+    <p>Ты идёшь вперёд. Замок вдалеке манит своим теплом.</p>
+    <img class="castle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Neuschwanstein_castle.jpg/800px-Neuschwanstein_castle.jpg" alt="Castle" />
+  </section>
+
+  <section>
+    <p>Кот Соул идёт рядом. Он мягко урчит и смотрит тебе в душу.</p>
+    
+    <div id="catLottie" class="cat" style="width:180px;height:180px;"></div>
+
+  </section>
+
+  <section>
+    <p>Ты останавливаешься. Вокруг — спокойствие. <br> <a href="https://t.me/RiskniGolovoy" style="color:lightblue;">Написать Марату</a></p>
+  </section>
+
+  <script>
+    gsap.utils.toArray("section").forEach((section, i) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        }
+      });
+    });
+  
+  // Воспроизведение фоновой музыки и звуков
+  const bgMusic = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2022/03/15/audio_587491f6e3.mp3?filename=magic-attack-7187.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.3
+  });
+
+  const forestSound = new Howl({
+    src: ['https://cdn.pixabay.com/download/audio/2023/03/15/audio_2199e7c329.mp3?filename=night-forest-145891.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.2
+  });
+
+  // Огни замка (мерцание)
+  const castleLight = document.querySelector(".castle");
+  if (castleLight) {
+    setInterval(() => {
+      castleLight.style.filter = "brightness(" + (0.9 + Math.random() * 0.2) + ")";
+    }, 800);
+  }
+
+  // Lottie-анимация кота
+  lottie.loadAnimation({
+    container: document.getElementById('catLottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/b8b75f84-bf52-4d7b-91c0-96b77dd145a1/edUoRuLmsH.json' // милый анимированный чёрный кот
+  });
+</script>
+
+
+</body>
+</html>
